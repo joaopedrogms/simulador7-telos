@@ -2,7 +2,11 @@ const movies = [];
 const crypto = require("crypto");
 
 const listMovies = (req, res) => {
-    res.json(movies);
+    if (movies.length === 0) {
+        return res.json({ message: "No movies found" });
+    } else {
+        res.json(movies);
+    }
 }
 
 const getMovieById = (req, res) => {
@@ -40,8 +44,8 @@ const createMovie = (req, res) => {
 
     const { title, description, year, genres, image, video } = req.body;
 
-    if (!title || !year) {
-        return res.status(400).json({ error: "Title and Year are required!" });
+    if (!title || !description || !year || !genres || !image || !video) {
+        return res.status(400).json({ error: "All fields are required!" });
     }
 
     const movie = {
