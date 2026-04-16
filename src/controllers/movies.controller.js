@@ -3,7 +3,7 @@ const crypto = require("crypto");
 
 const listMovies = (req, res) => {
     if (movies.length === 0) {
-        return res.json({ message: "No movies found" });
+        return res.status(404).json({ error: "No movies found" });
     } else {
         res.json(movies);
     }
