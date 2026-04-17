@@ -1,0 +1,215 @@
+{
+  "info": {
+    "name": "Simulador 7 - Telos",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Filmes",
+      "item": [
+        {
+          "name": "Pegar lista de filmes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Pegar filme específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies/348080",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies",
+                "348080"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Adicionar múltiplos filmes",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"title\": \"O bicho vai pegar\",\n    \"description\": \"Boog, um urso pardo, encontra-se preso na floresta três dias antes da temporada de caça.\",\n    \"year\": 2006,\n    \"genres\": [\"Aventura\", \"Animação\"],\n    \"image\": \"https://pin.it/2aRN71qZZ\",\n    \"video\": \"https://www.youtube.com/watch?v=eFeJrKy2WZ8\"\n  },\n  {\n    \"title\":\"Os Sem-Floresta\",\n    \"description\": \"Um guaxinim intrigante engana uma família de criaturas da floresta para ajudá-lo a pagar uma dívida de alimentos, mas ele aprende uma lição sobre família.\",\n    \"year\": 2006,\n    \"genres\": [\"Animação\", \"Aventura\", \"Comédia\"],\n    \"image\": \"https://pin.it/6iZK2tg3B\",\n    \"video\": \"https://www.youtube.com/watch?v=wOpNdR0TIR0\"\n  },\n  {\n    \"title\": \"2012\",\n    \"description\": \"Um escritor frustrado luta para manter a sua família viva quando uma série de catástrofes globais ameaça aniquilar a humanidade.\",\n    \"year\": 2009,\n    \"genres\": [\"Ação\", \"Aventura\", \"Ficção Científica\"],\n    \"image\": \"https://pin.it/719ns7HMa\",\n    \"video\": \"https://www.youtube.com/watch?v=coS7hHB30Yk\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Editar filme",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies/727296",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies",
+                "727296"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Título editado.\",\n  \"description\": \"O título desse filme foi editado.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Deletar filme",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies/400109",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies",
+                "400109"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Adicionar um único filme",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{  \n    \"title\": \"O Preço do Amanhã\",\n    \"description\": \"Em um futuro onde as pessoas param de envelhecer aos 25 anos e precisam trabalhar para ganhar mais tempo de vida, Will Salas é acusado de assassinato e fugir com uma refém - conexão que se torna parte importante na luta contra o sistema.\",\n    \"year\": 2011,\n    \"genres\": [\"Ação\", \"Ficção Científica\", \"Suspense\"],\n    \"image\": \"https://pin.it/34c2YWRsh\",\n    \"video\": \"https://www.youtube.com/watch?v=yIiXRp_vTek\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Adicionar filme com atributo faltando",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3333/movies",
+              "protocol": "http",
+              "host": [
+                "localhost:3333"
+              ],
+              "path": [
+                "movies"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{  \n    \"title\": \"Um Filme Minecraft\",\n    \"description\": \"Quatro desajustados são transportados para um bizarro país das maravilhas cúbico onde impera a imaginação. Para voltar para casa, eles terão que dominar este mundo enquanto embarcam em uma missão com um experiente construtor imprevisível.\",\n    \"year\": 2025,\n    \"genres\": [\"Ação\", \"Aventura\", \"Comédia\"],\n    \"image\": \"https://pin.it/QE33I7AQV\",\n    \"video\": \"https://www.youtube.com/watch?v=3IVPHxs4NoM\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}

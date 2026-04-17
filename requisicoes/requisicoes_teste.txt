@@ -1,0 +1,84 @@
+### Requisição 1 ###
+Nome: Pegar lista de filmes
+Método: GET
+URL: http://localhost:3333/movies
+
+### Requisição 2 ###
+Nome: Pegar filme específico
+Método: GET
+URL: http://localhost:3333/movies/(adicionar ID)
+
+### Requisição 3 ###
+Nome: Adicionar filme único
+Método: POST
+URL: http://localhost:3333/movies
+Body (JSON):
+{  
+    "title": "O Preço do Amanhã",
+    "description": "Em um futuro onde as pessoas param de envelhecer aos 25 anos e precisam trabalhar para ganhar mais tempo de vida, Will Salas é acusado de assassinato e fugir com uma refém - conexão que se torna parte importante na luta contra o sistema.",
+    "year": 2011,
+    "genres": ["Ação", "Ficção Científica", "Suspense"],
+    "image": "https://pin.it/34c2YWRsh",
+    "video": "https://www.youtube.com/watch?v=yIiXRp_vTek"
+}
+
+### Requisição 4 ###
+Nome: Adicionar múltiplos filmes
+Método: POST
+URL: http://localhost:3333/movies
+Body (JSON):
+[
+  {
+    "title": "O bicho vai pegar",
+    "description": "Boog, um urso pardo, encontra-se preso na floresta três dias antes da temporada de caça.",
+    "year": 2006,
+    "genres": ["Aventura", "Animação"],
+    "image": "https://pin.it/2aRN71qZZ",
+    "video": "https://www.youtube.com/watch?v=eFeJrKy2WZ8"
+  },
+  {
+    "title":"Os Sem-Floresta",
+    "description": "Um guaxinim intrigante engana uma família de criaturas da floresta para ajudá-lo a pagar uma dívida de alimentos, mas ele aprende uma lição sobre família.",
+    "year": 2006,
+    "genres": ["Animação", "Aventura", "Comédia"],
+    "image": "https://pin.it/6iZK2tg3B",
+    "video": "https://www.youtube.com/watch?v=wOpNdR0TIR0"
+  },
+  {
+    "title": "2012",
+    "description": "Um escritor frustrado luta para manter a sua família viva quando uma série de catástrofes globais ameaça aniquilar a humanidade.",
+    "year": 2009,
+    "genres": ["Ação", "Aventura", "Ficção Científica"],
+    "image": "https://pin.it/719ns7HMa",
+    "video": "https://www.youtube.com/watch?v=coS7hHB30Yk"
+  }
+]
+
+### Requisição 5 ###
+Nome: Adicionar filme com atributo faltando
+Método: POST
+URL: http://localhost:3333/movies
+Body (JSON):
+{  
+    "title": "Um Filme Minecraft",
+    "year": 2025,
+    "genres": ["Ação", "Aventura", "Comédia"],
+    "image": "https://pin.it/QE33I7AQV",
+    "video": "https://www.youtube.com/watch?v=3IVPHxs4NoM"
+}
+
+### Requisição 6 ###
+Nome: Editar filme
+Método: PUT
+URL: http://localhost:3333/movies/(adicionar ID)
+Body (JSON):
+{
+  "title": "Título editado.",
+  "description": "O título desse filme foi editado."
+}
+
+### Requisição 7 ###
+Nome: Deletar filme
+Método: DELETE
+URL: http://localhost:3333/movies/(adicionar ID)
+
